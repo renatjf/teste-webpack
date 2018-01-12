@@ -1,3 +1,5 @@
-var Hello = require('./hello');
+const Hello = require('./components/hello');
+// require('./css/main.css');
+require('./assets/sass/main.scss');
 
-Hello('Teste Webpack', document.querySelector('h2'));
+Hello('Webpack', document.querySelector('h1'));
