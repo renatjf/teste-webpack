@@ -1,24 +1,23 @@
+var webpack = require('webpack');
+var path = require('path');
+
+//export sass to css
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-  entry: './main.js',
-  output: {
-    filename: './js/bundle.js'
-  },
+  context: path.join(__dirname, ""),
+  entry: "./main.js",
   module: {
     loaders: [
       {
         test: /\.js(x)?$/,
-        exclude: /node_modules/,
+        exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader',
         query: {
-          presets: ['es2015', 'react']
+          presets: ['es2015', 'react'],
+          plugins: ['react-html-attrs', 'transform-class-properties', 'transform-decorators-legacy'],
         }
-      }
-    ],
-  },
-  module: {
-    rules: [
+      },
       {
         test: /\.scss$/,
         use: ExtractTextPlugin.extract({
@@ -28,10 +27,11 @@ module.exports = {
       }
     ]
   },
+  output: {
+    path: __dirname + "",
+    filename: "./js/bundle.js"
+  },
   plugins: [
     new ExtractTextPlugin('css/bundle.css')
-  ]
+  ],
 };
-
-
-

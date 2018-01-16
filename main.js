@@ -1,3 +1,12 @@
-const Hello = require('./components/hello');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App01 from './components/App01';
+
+//include sass
 require('./assets/sass/main.scss');
-Hello('Webpack', document.querySelector('h1'));
+
+// const App = require('./components/App');
+
+// Hello('Webpack', document.querySelector('h1'));
+
+ReactDOM.render(<App01 />, document.getElementById('app'));
