@@ -5,4 +5,4 @@ npm i = install modules
 
 Rodar o projeto = npm start
 
-Build o projeto = npm run build
+Build o projeto = webpack -p (instale o webpack global)
