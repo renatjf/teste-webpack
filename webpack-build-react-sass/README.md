@@ -5,4 +5,4 @@ npm i = install modules
 
 Rodar o projeto = npm start
 
-Build o projeto = webpack -p
+Build o projeto = npm run build
