@@ -13,3 +13,11 @@ new webpack.ProvidePlugin({
     '$': 'jquery/dist/jquery.js',
     'jQuery': 'jquery/dist/jquery.js'
 })
+
+#criando o vendor.bundle.js
+# vai ser vir para seperar bibliotecas como o Jquery e etc
+
+new webpack.optimize.CommonsChunkPlugin({
+    name: 'vendor',
+    filename: 'js/vendor.bundle.js' //separar biblioteca de terceiros (ex: jquery)
+})

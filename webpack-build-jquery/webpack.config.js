@@ -6,7 +6,10 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   context: path.join(__dirname, ""),
-  entry: "./main.js",
+entry: {
+  main: './main.js',
+  vendor: ['jquery']
+},
   module: {
     loaders: [
       {
@@ -36,6 +39,11 @@ module.exports = {
     new webpack.ProvidePlugin({
       '$': 'jquery/dist/jquery.js',
       'jQuery': 'jquery/dist/jquery.js'
+    }),
+    new webpack.optimize.ModuleConcatenationPlugin(),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      filename: 'js/vendor.bundle.js' //separar biblioteca de terceiros (ex: jquery)
     })
   ],
 };
