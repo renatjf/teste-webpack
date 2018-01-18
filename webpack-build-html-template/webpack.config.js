@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 //export sass to css
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -35,11 +36,21 @@ entry: {
     filename: "./js/bundle.js"
   },
   plugins: [
-    new ExtractTextPlugin('css/bundle.css'),
+    new HtmlWebpackPlugin({
+      hash: true,
+      minify: {
+        html5: true,
+        collapseWhitespace: true,
+        removeComments: true
+      },
+      filename: 'index.html',
+      template: __dirname + '/template/main.html'
+    }),
+    new ExtractTextPlugin('css/bundle.css'), //exporta o css gerado pelo sass
     new webpack.ProvidePlugin({
       '$': 'jquery/dist/jquery.js',
       'jQuery': 'jquery/dist/jquery.js'
-    }),
+    }), //importa a biblioteca jquery para o projeto
     new webpack.optimize.ModuleConcatenationPlugin(),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',

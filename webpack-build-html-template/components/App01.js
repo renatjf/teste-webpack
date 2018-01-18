@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h4>Webpack build React, Sass e Jquery</h4>
+        <h4>Webpack build Html Template</h4>
         <h1>Componente App 01</h1>
         <App02 />
       </div>
