@@ -1,4 +1,4 @@
-# teste-webpack-build-react-sass
+# teste-webpack-build-jquery
 Testes em Webpack Build React, Sass e Jquery
 _____________________
 npm i = install modules
