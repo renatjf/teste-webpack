@@ -32,6 +32,7 @@ module.exports = {
     filename: "./js/bundle.js"
   },
   plugins: [
-    new ExtractTextPlugin('css/bundle.css')
+    new ExtractTextPlugin('css/bundle.css'),
+    new webpack.optimize.ModuleConcatenationPlugin()
   ],
 };
