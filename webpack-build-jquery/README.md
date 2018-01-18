@@ -1,0 +1,13 @@
+# teste-webpack-build-react-sass
+Testes em Webpack Build React, Sass e Jquery
+_____________________
+npm i = install modules
+
+Rodar o projeto = npm start
+
+Build o projeto = webpack -p (instale o webpack global)
+
+new webpack.ProvidePlugin({
+    '$': 'jquery/dist/jquery.js',
+    'jQuery': 'jquery/dist/jquery.js'
+})
