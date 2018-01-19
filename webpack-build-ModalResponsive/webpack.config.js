@@ -1,16 +1,16 @@
-var webpack = require('webpack');
-var path = require('path');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 //export sass to css
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   context: path.join(__dirname, ""),
-entry: {
-  main: './main.js',
-  vendor: ['jquery']
-},
+  entry: {
+    main: './main.js',
+    vendor: ['jquery']
+  },
   module: {
     loaders: [
       {
@@ -46,7 +46,7 @@ entry: {
       filename: 'index.html',
       template: __dirname + '/template/main.html'
     }),
-    
+
     new ExtractTextPlugin('css/bundle.css'), //exporta o css gerado pelo sass
 
     new webpack.ProvidePlugin({
