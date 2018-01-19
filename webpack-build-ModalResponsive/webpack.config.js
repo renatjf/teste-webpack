@@ -46,12 +46,16 @@ entry: {
       filename: 'index.html',
       template: __dirname + '/template/main.html'
     }),
+    
     new ExtractTextPlugin('css/bundle.css'), //exporta o css gerado pelo sass
+
     new webpack.ProvidePlugin({
       '$': 'jquery/dist/jquery.js',
       'jQuery': 'jquery/dist/jquery.js'
     }), //importa a biblioteca jquery para o projeto
+
     new webpack.optimize.ModuleConcatenationPlugin(),
+
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       filename: 'js/vendor.bundle.js' //separar biblioteca de terceiros (ex: jquery)
