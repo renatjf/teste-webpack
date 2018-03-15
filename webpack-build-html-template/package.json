@@ -4,7 +4,8 @@
   "description": "Teste webpack",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "node_modules/.bin/webpack-dev-server --config ./webpack.config.js --host 0.0.0.0 --port 3000"
+    "start": "node_modules/.bin/webpack-dev-server --config ./webpack.config.js --host 0.0.0.0 --port 3000",
+    "build": "webpack --config webpack.config.js"
   },
   "dependencies": {
     "jquery": "^3.2.1",
