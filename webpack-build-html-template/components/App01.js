@@ -26,14 +26,17 @@ const Title = styled.div`
   color: black;
   font-size: 30px;
 }
+li {
+  display: block;
+}
 `
 
-let map = new Map([{}
-  ['01'],
-  ['02'],
-  ['03'], 
-]);
-  
+const descricao = [
+  'Funcao map 1',
+  'Funcao map 2',
+  'Funcao map 3'
+]
+
 
 
 class App extends Component {
@@ -51,11 +54,16 @@ class App extends Component {
           aqui rola o style component
           <Title className="primary">Titulo
           <div className="lala">
-          teste          
+              teste
           </div>
-          <div>{map}</div>
           </Title>
         </div>
+        <ul>
+          {descricao.map(
+            function (list) {
+              return <li>{list}</li>
+            }
+          )}</ul>
       </div>
     );
   }
