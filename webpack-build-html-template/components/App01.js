@@ -9,10 +9,8 @@ const rem = (number) => {
   return `${tmp}rem`;
 };
 
-
-
 const teste = {
-  color: "red",
+  color: "#cccccc",
   fontSize: rem(50)
 }
 
@@ -30,6 +28,12 @@ const Title = styled.div`
 }
 `
 
+let map = new Map([{}
+  ['01'],
+  ['02'],
+  ['03'], 
+]);
+  
 
 
 class App extends Component {
@@ -47,8 +51,9 @@ class App extends Component {
           aqui rola o style component
           <Title className="primary">Titulo
           <div className="lala">
-          teste
+          teste          
           </div>
+          <div>{map}</div>
           </Title>
         </div>
       </div>
