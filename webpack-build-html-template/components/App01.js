@@ -59,6 +59,7 @@ class App extends Component {
           </Title>
         </div>
         <ul>
+          component Map
           {descricao.map(
             function (list) {
               return <li>{list}</li>
