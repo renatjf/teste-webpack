@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import App02 from './App02';
+import StyledComponents from './styled_components/styled';
 
 const rem = (number) => {
   let tmp = number;
@@ -13,6 +14,13 @@ const teste = {
   color: "#cccccc",
   fontSize: rem(50)
 }
+
+const styles = {
+  span: {
+    color: "blue"
+  }
+};
+
 
 const Title = styled.div`
   font-size: 1.5em;
@@ -65,6 +73,9 @@ class App extends Component {
               return <li>{list}</li>
             }
           )}</ul>
+        <div style={StyledComponents}>
+          <span>Renato Freitas</span>
+        </div>
       </div>
     );
   }
