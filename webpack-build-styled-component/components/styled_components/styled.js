@@ -6,8 +6,8 @@ export function title(width) {
     tmp = parseFloat(tmp) / 16;
     return `${tmp}rem`;
   };
-  
-  return `
+
+    return `
     font-size: ${rem(width)};    
   `;
 }
