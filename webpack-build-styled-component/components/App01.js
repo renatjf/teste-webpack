@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { title } from './styled_components/styled';
 
-
-
 const Box = styled.div`
   ${ title('250') }  
 `;
