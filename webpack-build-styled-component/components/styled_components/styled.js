@@ -8,6 +8,6 @@ export function title(width) {
   };
 
     return `
-    font-size: ${rem(width)};    
+    font-size: ${rem(width)};
   `;
 }
