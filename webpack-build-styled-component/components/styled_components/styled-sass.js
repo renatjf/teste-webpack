@@ -7,7 +7,6 @@ const TesteSASS = styled.div`
     & .lalala {
       background: red;
     }
-    
-`;
+` ;
 
 export default TesteSASS;
