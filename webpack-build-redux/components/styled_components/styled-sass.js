@@ -6,6 +6,7 @@ const TesteSASS = styled.div`
 
     & .lalala {
       background: red;
+      font-size: 40px;
     }
 ` ;
 

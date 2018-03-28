@@ -29,6 +29,15 @@ module.exports = {
           fallback: 'style-loader',
           use: ['css-loader', 'sass-loader']
         })
+      },
+      {
+        test: /\.js(x)?$/,
+        loader: 'webpack-px-to-rem',
+        query: {
+          basePx: 16,
+          min: 1,
+          floatWidth: 3 //numero de caracter depois do ponto
+        }
       }
     ]
   },
