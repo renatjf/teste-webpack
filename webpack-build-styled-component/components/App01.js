@@ -7,10 +7,7 @@ class App extends React.Component {
       <div>
         <h4>Webpack build Styled component</h4>
         <TesteSass>
-          styled sass
-          <div className="lalala">
-          lalalalalalal
-          </div>
+          styled sass          
         </TesteSass>
       </div>
     );

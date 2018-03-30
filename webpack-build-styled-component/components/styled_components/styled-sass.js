@@ -1,12 +1,9 @@
 import styled from 'styled-components';
+import fonts from '../styled_components/fonts';
 
 const TesteSASS = styled.div`
-    background: black;
-    color: white;
-
-    & .lalala {
-      background: red;
-    }
+    font-family: SimplonRegular;
+    font-size: 50px;
 ` ;
 
 export default TesteSASS;
