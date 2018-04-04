@@ -9,9 +9,9 @@ class App extends React.Component {
       <div>
         <h4>Webpack build React Router</h4>
         <TesteSass>
-          App 01 <br/>
-          <Link to="/App02">App02</Link>
+          Component 01
         </TesteSass>
+        <Link to={"/Component02"}>Component 02</Link>
       </div>
     );
   }

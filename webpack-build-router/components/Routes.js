@@ -1,14 +1,16 @@
 import React from 'react';
-import { HashRouter, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-import App01 from './App01';
-import App02 from './App02';
+import Home from './Home';
+import Component01 from './Component1';
+import Component02 from './Component2';
 
 export default () => (
-		<HashRouter>
-			<div>
-				<Route path="/" exact component={App01} />
-				<Route path="/App02" exact component={App02} />
-			</div>
-		</HashRouter>
-	);
+  <Router>
+  <div>
+    <Route exact path="/" component={Home}/>
+    <Route exact path="/Component01" component={Component01}/>
+    <Route exact path="/Component02" component={Component02}/>
+  </div>
+</Router>
+);
