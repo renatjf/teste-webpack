@@ -1,49 +1,44 @@
 import React from "react";
-import TesteComponentHome from './HomeIndex';
+import HomeIndex from './HomeIndex';
 import TesteComponent1 from './Component1';
-import TesteComponent2 from './Component2';
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-import TesteSass from './styled_components/styled-sass';
+import { BrowserRouter as Router, Route, Link, HashRouter} from "react-router-dom";
+
 
 const App = () => (
-
-  <Router>
-    <TesteSass>
-      <div>
-        <ul>
-          <li>
-            <Link to="/ComponentHome">Home (static)</Link>
-          </li>
-          <li>
-            <Link to="/Component01">Component 01 (static)</Link>
-          </li>
-          <li>
-            <Link to="/Component02">Component 02 (static)</Link>
-          </li>
-          <li>
-            <Link to="/teste01">Teste 01 (dynamic)</Link>
-          </li>
-          <li>
-            <Link to="/teste02">Teste 02 (dynamic)</Link>
-          </li>
-        </ul>
-        <Switch>
-          <Route path="/ComponentHome" component={ComponentHome} />
-          <Route path="/Component01" component={Component01} />
-          <Route path="/Component02" component={Component02} />
-          <Route path="/:load" component={LoadMenu} />
-        </Switch>
-      </div>
-    </TesteSass>
-  </Router>
+  <HashRouter>
+    <div>
+      <ActiveMenuLink activeExact={true} to="/" label="Home" />
+      <ActiveMenuLink to="/component1" label="Component1" />
+      <hr />
+      <Route exact path="/" component={Home} />
+      <Route path="/component1" component={Component1} />
+    </div>
+  </HashRouter>
 );
 
-const ComponentHome = () => <div className="novaclass"><TesteComponentHome /></div>;
-const Component01 = () =>  <TesteComponent1 />;
-const Component02 = () =>  <TesteComponent2 />;
+const ActiveMenuLink = ({ label, to, activeExact }) => (
+  <Route
+    path={to}
+    exact={activeExact}
+    children={({ match }) => (
+      <div className={match ? "active" : ""}>
+        {match ? "> " : ""}
+        <Link to={to}>{label}</Link>
+      </div>
+    )}
+  />
+);
 
-const LoadMenu = ({ match }) => (
-    <div className="testeclass">{match.params.load}</div>
+const Home = () => (
+  <div className="testeClass">
+    <HomeIndex />
+  </div>
+);
+
+const Component1 = () => (
+  <div>
+    <TesteComponent1 />
+  </div>
 );
 
 export default App;
