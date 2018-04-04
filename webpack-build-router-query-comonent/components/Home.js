@@ -1,4 +1,5 @@
 import React from "react";
+import TesteComponentHome from './HomeIndex';
 import TesteComponent1 from './Component1';
 import TesteComponent2 from './Component2';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
@@ -11,7 +12,7 @@ const App = () => (
       <div>
         <ul>
           <li>
-            <Link to="/Home">Home (static)</Link>
+            <Link to="/ComponentHome">Home (static)</Link>
           </li>
           <li>
             <Link to="/Component01">Component 01 (static)</Link>
@@ -27,9 +28,9 @@ const App = () => (
           </li>
         </ul>
         <Switch>
-          <Route path="/Home" component={Home} />
-          <Route path="/Component1" component={Component01} />
-          <Route path="/Component2" component={Component01} />
+          <Route path="/ComponentHome" component={ComponentHome} />
+          <Route path="/Component01" component={Component01} />
+          <Route path="/Component02" component={Component02} />
           <Route path="/:load" component={LoadMenu} />
         </Switch>
       </div>
@@ -37,14 +38,12 @@ const App = () => (
   </Router>
 );
 
-const Home = () => <h2>Home</h2>;
+const ComponentHome = () => <div className="novaclass"><TesteComponentHome /></div>;
 const Component01 = () =>  <TesteComponent1 />;
 const Component02 = () =>  <TesteComponent2 />;
-;
+
 const LoadMenu = ({ match }) => (
-  <div>
-    <div class="teste">{match.params.load}</div>
-  </div>
+    <div className="testeclass">{match.params.load}</div>
 );
 
 export default App;
