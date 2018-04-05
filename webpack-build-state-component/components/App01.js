@@ -6,7 +6,7 @@ class App extends React.Component {
     return (
       <div>        
         <TesteSass>
-          Component 01
+          Estou no component 01
         </TesteSass>
       </div>
     );

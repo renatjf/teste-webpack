@@ -5,7 +5,7 @@ import App02 from './App02';
 class Component01 extends React.Component {
   render() {
     return (
-      <div {...this.props}>
+      <div {...this.props.component}>
         <App01 />
       </div>
     );
@@ -14,7 +14,7 @@ class Component01 extends React.Component {
 class Component02 extends React.Component {
   render() {
     return (
-      <div {...this.props}>
+      <div {...this.props.component}>
         <App02 />
       </div>
     );
