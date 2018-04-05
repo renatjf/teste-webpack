@@ -9,7 +9,7 @@ import { BrowserRouter as Router, Route, Link, HashRouter} from "react-router-do
 const App = () => (
   <HashRouter>
     <div>
-      <ActiveMenuLink activeExact={true} to="/" label="Home" />
+      <ActiveMenuLink activeExact={true} to="/" label="Home" desc="teste de descricao" />
       <ActiveMenuLink to="/component1" label="Component1" />
       <hr />
       <Route exact path="/" component={Home} />
@@ -18,14 +18,14 @@ const App = () => (
   </HashRouter>
 );
 
-const ActiveMenuLink = ({ label, to, activeExact }) => (
+const ActiveMenuLink = ({ label, to, desc, activeExact }) => (
   <Route
     path={to}
     exact={activeExact}
     children={({ match }) => (
       <div className={match ? "active" : ""}>
         {match ? "> " : ""}
-        <Link to={to}>{label}</Link>
+        <Link to={to}>{label}<p>{desc}</p></Link>
       </div>
     )}
   />
