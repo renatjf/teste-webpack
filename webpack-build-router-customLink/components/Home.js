@@ -4,6 +4,8 @@ import TesteComponent1 from './Component1';
 import { BrowserRouter as Router, Route, Link, HashRouter} from "react-router-dom";
 
 
+
+
 const App = () => (
   <HashRouter>
     <div>
