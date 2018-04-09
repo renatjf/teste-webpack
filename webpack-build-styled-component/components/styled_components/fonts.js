@@ -1,5 +1,5 @@
 import { injectGlobal } from 'styled-components';
-// import * as vars from './variables'
+
 import simplonBoldEOT from '../../assets/fonts/simplon/simplonbp-bold-webfont.eot'
 import simplonBoldWOFF from '../../assets/fonts/simplon/simplonbp-bold-webfont.woff'
 import simplonBoldTTF from '../../assets/fonts/simplon/simplonbp-bold-webfont.ttf'
