@@ -29,6 +29,11 @@ export const COLOR_YELLOW_GOLD_HOVER = "#ffe443"
 
 export const COLOR_LIGHT_BLUE = "#009df7"
 
+export const border_color =`
+border: 1px solid red;
+padding: 20px;
+`;
+
 
 // // Colors
 // $color__white: #ffffff;

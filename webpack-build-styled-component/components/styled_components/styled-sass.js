@@ -5,6 +5,7 @@ import * as mixins from './mixins';
 const TesteSASS = styled.div`
     font-family: ${vars.FONT_LIGHT};
     font-size: ${mixins.rem(150)};
+    ${vars.border_color};
 ` ;
 
 export default TesteSASS;
